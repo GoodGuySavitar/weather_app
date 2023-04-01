@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/7671d15937.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div class="header">
+            <div class="header-buffer">Weather App</div> 
+        </div>
+        <form class="searchForm">
+            <div class="input-container">
+                <div class="input-buffer">
+                    <input type="text" name="city" class="city-name" placeholder="Enter city name">
+                </div>
+                <div class="button-container">
+                    <button class="button-buffer">Add</button>
+                </div>
+            </div>
+        </form>    
+    </section>
+        <div class="full-info">
+            <ul class="new-info">
+            </ul>
+        </div>  
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
