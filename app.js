@@ -2,12 +2,12 @@ const submit= document.querySelector(".searchForm");
 submit.addEventListener("submit", async function (e) {
     e.preventDefault();
     const userCity = submit.elements.city.value;
-    const latNlong = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${userCity}&appid=ffdd7bce5c1ded5022b34953c02a5b69`);
+    const latNlong = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${userCity}&appid=ffdd7bce5c1ded5022b34953c02a5b69/`);
     const latitude = latNlong.data[0].lat;
     const longitude = latNlong.data[0].lon;
     
     const config = { params : { lat: latitude, lon: longitude, appid: "ffdd7bce5c1ded5022b34953c02a5b69"}}   
-    const temp = await axios.get(`https://api.openweathermap.org/data/2.5/weather`,config)
+    const temp = await axios.get(`https://api.openweathermap.org/data/2.5/weather/`,config)
     const currTemp = Math.trunc(temp["data"].main.temp - 273.15)
     const feelsLike = Math.trunc(temp["data"].main.feels_like - 273.15)
     const humid = temp["data"].main.humidity;
